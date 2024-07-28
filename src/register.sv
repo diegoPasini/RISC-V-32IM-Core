@@ -6,9 +6,9 @@ module register(
     input [31:0] data_in,
     output reg [31:0] data_out 
 );
-    always @(posedge clock)
+    always @(posedge clk)
     begin 
         if (r_enable)
-            data_out <= data_in;
+            data_out = data_in;
     end
 endmodule

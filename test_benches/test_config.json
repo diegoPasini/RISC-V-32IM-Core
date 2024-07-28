@@ -1,4 +1,13 @@
 {
     "verilog_source_dir": "src",
-    "modules": ["rca"]
+    "modules": ["rca",
+                "alu_control_module",
+                "alu",
+                "control_unit",
+                "data_memory",
+                "imm_gen",
+                "instruct_mem",
+                "pc",
+                "register_file"
+            ]
 }

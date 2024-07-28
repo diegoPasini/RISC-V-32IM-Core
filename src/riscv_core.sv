@@ -11,7 +11,7 @@ module riscv_core(
     pc pc(
         .clk(clk), 
         .reset(reset), 
-        .pc(addr), 
+        .pc_out(addr), 
         .pc_next(pc_next)
     );
 
@@ -75,13 +75,11 @@ module riscv_core(
 
     // ALU
     wire [31:0] alu_result;
-    wire zero;
     alu alu_inst(
         .a(rd_1),
         .b(mux_alu_output),
         .control(alu_control),
-        .alu_result(alu_result),
-        .zero(zero)
+        .alu_result(alu_result)
     );
 
     // Data Memory
@@ -90,7 +88,6 @@ module riscv_core(
         .clk(clk),
         .mem_write(mem_write),
         .mem_read(mem_read),
-        .mem_size(2'b10), 
         .address(alu_result),
         .write_data(rd_2),
         .read_data(read_data)

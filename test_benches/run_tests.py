@@ -73,3 +73,6 @@ def runCocotbTests():
 
     finally:
         print(f"Total Tests: {total_tests}, Passed: {total_passed}, Failed: {total_failed}")
+
+if __name__ == "__main__":
+    runCocotbTests()

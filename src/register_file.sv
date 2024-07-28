@@ -28,10 +28,16 @@ module register_file(
     wire [31:0] register_one_hot;
     reg [31:0] registers [31:0];
 
+    rd_demultiplexer demux(
+        .we(reg_write),
+        .rd(rd),
+        .register(register_one_hot)
+    );
+
     generate
         genvar i;
-        for (i = 0; i < 32; i = i + 1) begin register_loop
-            register(
+        for (i = 0; i < 32; i = i + 1) begin : register_loop
+            register reg_inst(
                 .clk(clk), 
                 .r_enable(register_one_hot[i]),
                 .data_in(write_data),
@@ -40,6 +46,6 @@ module register_file(
         end
     endgenerate
     
-    assign read_data1 = registers[rs1];
-    assign read_data2 = registers[rs2];
+    assign rd1 = registers[rs1];
+    assign rd2 = registers[rs2];
 endmodule
