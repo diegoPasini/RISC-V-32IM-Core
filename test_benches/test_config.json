@@ -1,0 +1,4 @@
+{
+    "verilog_source_dir": "src",
+    "modules": ["rca"]
+}

@@ -1,7 +1,0 @@
-cocotb:
-  top_level: rca
-  verilog_sources:
-    - /Users/diego/Scripts/RISC-V-R32I-Core/ALU/rca.sv
-  sim:
-    timeout: 1000
-    vcd_file: dump.vcd

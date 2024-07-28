@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module riscv_core(
     input  wire clk,
     input  wire reset,
@@ -56,7 +58,7 @@ module riscv_core(
 
     // ALU Control
     wire [3:0] alu_control;
-    alu_control alu_ctrl(
+    alu_control_module alu_ctrl(
         .alu_op(alu_op),
         .func({instr[30], instr[14:12]}),
         .alu_control(alu_control)
@@ -119,18 +121,6 @@ module riscv_core(
     assign halt = 1'b0;
 
 endmodule
-
-module mux2to1 (
-    input  logic [31:0] data0, 
-    input  logic [31:0] data1, 
-    input  logic        sel,   
-    output logic [31:0] out    
-);
-
-    assign out = sel ? data1 : data0;
-
-endmodule
-
 
 module mux2to1 (
     input  logic [31:0] data0, 

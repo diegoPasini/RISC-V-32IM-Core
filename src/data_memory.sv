@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module data_memory(
     input wire clk,                 // Clock
     input wire mem_write,           // Memory write enable

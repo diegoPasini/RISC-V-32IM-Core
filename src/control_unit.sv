@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module control_unit(
     input [6:0] opcode,
     output reg branch,
@@ -6,7 +8,7 @@ module control_unit(
     output reg [1:0] alu_op,
     output reg mem_write,
     output reg alu_src,
-    output reg reg_write,
+    output reg reg_write
 );
    always@(*) begin
         case (opcode)
@@ -52,7 +54,7 @@ module control_unit(
                 mem_read <= 0;
                 mem_write <= 0;
                 branch <= 1;
-                alu_op <= 2'01;
+                alu_op <= 2'b01;
                 alu_src <= 1;
             end
 

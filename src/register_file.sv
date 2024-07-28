@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module rd_demultiplexer(
     input wire we,              
     input wire [4:0] rd,       
@@ -21,7 +23,7 @@ module register_file(
     input [31:0] write_data,
     input reg_write,
     output wire [31:0] rd1,
-    output wire [31:0] rd2,
+    output wire [31:0] rd2
 );
     wire [31:0] register_one_hot;
     reg [31:0] registers [31:0];
