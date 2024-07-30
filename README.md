@@ -2,13 +2,12 @@
 
 An implementation of multiple RISC-V cores in Verilog with increasing levels of effieciency. 
 
----
-
-### Overview:
-
-
-### Current Status
-- [ ] 
+### Current Project Status
+- [x] Single-Cycle
+- [ ] Pipelining
+- [ ] Branch Prediction
+- [ ] Caching
+- [ ] Superscalar Implementation
 
 
 ### ISA:
