@@ -1,8 +1,9 @@
 ## 5 Stage Pipelined RISC-V MIPS Implementation
 
 ### Schematic
-![alt text](image.png)
+![alt text](image-1.png)
 
-### Hazards
-- Luckily, due to the MIPS 5 stage pipelined design have no *structual hazards*
-- 
+### Hazard Types
+- Luckily, due to the MIPS 5 stage pipelined design, there can be no *structual hazards*
+- Data Hazards
+- Control Hazards
