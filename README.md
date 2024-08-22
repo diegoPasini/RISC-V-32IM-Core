@@ -1,6 +1,6 @@
 ## RISC-V 32IM Core Implementations
 
-An implementation of multiple RISC-V cores in Verilog with increasing levels of effieciency. 
+An implementation of a pipelined MIPS RISC-V core in System Verilog . 
 
 ### ISA:
 ![alt text](./imgs/risc-v-isa1.png)
